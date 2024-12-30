@@ -9,6 +9,7 @@
 }
 body{
     background: black;
+    height: 100%;
 }
 .main-body{
     height: 100vh;
@@ -27,10 +28,8 @@ body{
 
 .line span{
     display: block;
-    width: 90%;
     background-color: #007bff;
     height: 2px;
-    margin: 50px;
     animation: popin 1s ease forwards;
 }
 
@@ -42,7 +41,7 @@ body{
     cursor:default;
 }
 .floating-elements p{
-    font-size: 300px;
+    font-size: 100px;
 }
 @keyframes shake{
     0%{ transform: rotate(0deg);}
@@ -59,7 +58,7 @@ body{
 
 /* Basic styling for the header and nav */
 nav ul {
-    width: 80%;
+    width: 50%;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -75,7 +74,7 @@ nav a {
     height: 100%;
     text-decoration: none;
     display: flex;
-    padding: 0 30px 30px;
+    padding: 0 30px 10px;
     align-items: center;
     color: #e6e6e6;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -115,7 +114,6 @@ nav li:first-child{
 }
 .into-block{
     height: 100vh;
-    padding: 100px;
     align-items: center;
     width: 100%;
 }
@@ -130,7 +128,7 @@ nav li:first-child{
 .into-block-sub h{
     color: rgb(255, 255, 255);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 70px;
+    font-size: 50px;
 }
 .into-block-sub h1{
     color: rgb(255, 255, 255);
@@ -163,7 +161,6 @@ button.resume{
 /* Full Height Section */
 #academics {
     height: 100vh; 
-    margin-top: 100px;/* Full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Vertically center content */
@@ -401,7 +398,6 @@ button.resume{
     text-align: center;
     background-color: #ffffff;
     height: 70vh;
-    margin: 20px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
@@ -420,7 +416,7 @@ button.resume{
     white-space: nowrap;
 }
 .experience-section h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     position: relative;
     display: inline-block;
     margin-top: 10px;
