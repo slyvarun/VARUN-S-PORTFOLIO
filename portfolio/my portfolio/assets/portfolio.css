@@ -15,7 +15,6 @@ body{
     width: 100%;
     border-top-right-radius: 20px ;
     border-top-left-radius:20px;
-    margin: 30px;
 }
 @keyframes popin{
     0%{
