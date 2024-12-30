@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .ring {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: rotate 10s infinite linear, glow 2s infinite ease-in-out;
+        }
+
+        .ring:nth-child(1) {
+            top: 10%;
+            left: 20%;
+        }
+
+        .ring:nth-child(2) {
+            top: 40%;
+            left: 60%;
+            animation-duration: 15s, 2.5s;
+        }
+
+        .ring:nth-child(3) {
+            top: 70%;
+            left: 30%;
+            animation-duration: 12s, 3s;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .form-container {
+            height: 500px;
+            position: relative;
+            max-width: 900px;
+            margin: 10% auto;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-container h2 {
+            margin: 0 0 20px;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: #5b9aff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background: #497ace;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+    </div>
+
+    <div class="form-container">
+        <h2>Let's Get in touch</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required style="height: 150px;"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+    
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value,
+            };
+    
+            try {
+                const response = await fetch('http://localhost:3000/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+    
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                } else {
+                    alert('Failed to send message.');
+                }
+            } catch (error) {
+                console.error(error);
+                alert('An error occurred.');
+            }
+        });
+    </script>
+</body>
+</html>

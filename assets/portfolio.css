@@ -1,0 +1,558 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+    height: 100%;
+}
+.main-body{
+    height: 100vh;
+    width: 100%;
+    border-top-right-radius: 20px ;
+    border-top-left-radius:20px;
+}
+@keyframes popin{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+.line span{
+    display: block;
+    background-color: #007bff;
+    height: 2px;
+    animation: popin 1s ease forwards;
+}
+
+.floating-elements{
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    animation: shake 2s infinite;
+    cursor:default;
+}
+.floating-elements p{
+    font-size: 100px;
+}
+@keyframes shake{
+    0%{ transform: rotate(0deg);}
+    20%{ transform: rotate(25deg);}
+    40%{ transform: rotate(-15deg);}
+    60%{ transform: rotate(20deg);}
+    80%{ transform: rotate(-10deg);}
+    100%{ transform: rotate(0deg);}
+}
+
+
+
+
+
+/* Basic styling for the header and nav */
+nav ul {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+nav a {
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    padding: 0 30px 10px;
+    align-items: center;
+    color: #e6e6e6;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav a:hover {
+    transition-property: all;
+    color: #007bff;
+    transition: all ease .2s;
+
+}
+nav li:first-child{
+    margin-right: auto;
+    font-size: x-large;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.284);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter:blur(20px);
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+.into-block{
+    height: 100vh;
+    align-items: center;
+    width: 100%;
+}
+.into-block-sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 100px;
+    width: 50%;
+}
+.into-block-sub h{
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+.into-block-sub h1{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+button.resume{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.resume-btn{
+    margin: 50px;
+   height:50px;
+   width: 200px;
+   border-radius: 50px;
+   font-size: 15px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.resume-btn:hover{
+    box-shadow: 5px 5px 10px black;
+    transition: .1s ease-in-out;
+    border: transparent;
+    transform: scale(1.1);
+}
+
+
+
+
+/* Full Height Section */
+/* Full Height Section */
+/* Full Height Section */
+#academics {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    background-color: #f4f4f9;
+    padding: 0 20px; /* Added horizontal padding for responsiveness */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Education Section Styling */
+.edu-details {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Education Header */
+.edu-title h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Content Layout */
+.edu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px; /* Added space for bottom of the page */
+}
+
+.box {
+    background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, backdrop-filter 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    background-color: #007bff;
+    backdrop-filter: blur(60px);
+    transition: .2s ease-in-out; /* Apply blur on hover */
+}
+
+.box h4 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.percentage {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* White text for visibility */
+    position: absolute;
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Exactly center the text */
+    opacity: 0; /* Initially hide the percentage */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover .percentage {
+    opacity: 1; /* Show percentage on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Section Styling */
+#aboutme {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #000000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    gap: 30px;
+}
+
+/* Image Section */
+.image-selection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: white;
+}
+
+.about-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 100px 200px;
+    object-fit: cover;
+    border: 4px solid #ddd;
+}
+
+/* Info Section */
+.infosection {
+    flex: 2;
+    text-align: left;
+    color: #333;
+}
+
+.infosection h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.infosection h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.infosection p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Skill Section */
+.skillsection {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.subject {
+    font-weight: bold;
+    color: #555;
+    width: 150px;
+}
+
+.progress-bar {
+    width: 70%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-line {
+    height: 15px;
+    background-color: #007bff;
+    border-radius: 20px;
+}
+
+/* Hover Effects */
+.skill:hover .subject {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.skill:hover .progress-line {
+    background-color: #007bff;
+}
+
+
+
+
+
+
+
+#experience {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    height: 70vh;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+}
+.background-text {
+    position: absolute;
+    left: 50%;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    font-weight: bold;
+    color: rgba(200, 200, 200, 0.2);
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.experience-section h2 {
+    font-size: 1rem;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    color: #3a1c71;
+}
+
+.experience-section h2::before,
+.experience-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #ff6b6b;
+    margin: 10px auto 0 auto;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.experience-card {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.date-range {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.experience-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.experience-card p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: #666;
+}
+
+.experience-card span {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+
+
+
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 20vh;
+  }
+  .startup-name {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .connect-btn {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+.connect-btn button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .connect-btn a{
+    text-decoration: none;
+  }
+ .connect-btn button:hover {
+    background-color: #0056b3;
+  }
+.social-links {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+  }
+  .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .social-links a:hover {
+    color: #007BFF;
+  }
+  .footer-img{
+    height: 40px;
+    filter: invert(1);
+  }
+  .footer-img:hover{
+    filter: invert(0);
+  }
+  .footer-bottom {
+    display: flex;
+    margin-top: 8vh;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 20px;
+    align-items: center;
+  }
