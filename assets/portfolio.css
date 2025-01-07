@@ -1,6 +1,3 @@
-/* styles.css */
-
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +22,6 @@ body{
         width: 90%;
     }
 }
-
 .line span{
     display: block;
     background-color: #007bff;
@@ -35,13 +31,13 @@ body{
 
 .floating-elements{
     position: absolute;
-    top: 20%;
-    left: 55%;
+    top: 25%;
+    left: 50%;
     animation: shake 2s infinite;
     cursor:default;
 }
 .floating-elements p{
-    font-size: 100px;
+    font-size: 200px;
 }
 @keyframes shake{
     0%{ transform: rotate(0deg);}
@@ -52,11 +48,8 @@ body{
     100%{ transform: rotate(0deg);}
 }
 
-
-
-
-
 /* Basic styling for the header and nav */
+
 nav ul {
     width: 50%;
     list-style: none;
@@ -89,7 +82,7 @@ nav li:first-child{
     margin-right: auto;
     font-size: x-large;
 }
-.sidebar{
+.side-bar{
     position: fixed;
     top: 0;
     right: 0;
@@ -103,14 +96,15 @@ nav li:first-child{
     justify-content: flex-start;
     backdrop-filter:blur(20px);
 }
-.sidebar li{
+.side-bar li{
+    width: 100%;
+    padding: 20px;
+}
+.side-bar a{
     width: 100%;
 }
-.sidebar a{
-    width: 100%;
-}
-.menu-button{
-    display: none;
+.menu-btn{
+    display: block;
 }
 .into-block{
     height: 100vh;
@@ -154,31 +148,24 @@ button.resume{
 }
 
 
+/* ---ACADEMICS SECTION */
 
-
-/* Full Height Section */
-/* Full Height Section */
-/* Full Height Section */
 #academics {
     height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
+    justify-content: center;
+    align-items: center;
     background-color: #f4f4f9;
-    padding: 0 20px; /* Added horizontal padding for responsiveness */
+    padding: 0 20px;
     font-family: 'Arial', sans-serif;
 }
-
-/* Section Title Styling */
 .section-title {
     font-size: 2.5rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
 }
-
-/* Education Section Styling */
 .edu-details {
     max-width: 1200px;
     width: 100%;
@@ -191,8 +178,6 @@ button.resume{
     align-items: center;
     gap: 2rem;
 }
-
-/* Education Header */
 .edu-title h2 {
     font-size: 1.8rem;
     color: #333;
@@ -200,19 +185,16 @@ button.resume{
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
-
-/* Content Layout */
 .edu-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
-    margin-bottom: 20px; /* Added space for bottom of the page */
+    margin-bottom: 20px;
 }
-
 .box {
-    background-color: rgba(249, 249, 249, 0.8); /* Semi-transparent background */
+    background-color: rgba(249, 249, 249, 0.8);
     border: 1px solid #ddd;
     padding: 20px;
     width: 30%;
@@ -227,55 +209,39 @@ button.resume{
     justify-content: center;
     align-items: center;
 }
-
 .box:hover {
     transform: translateY(-5px);
     background-color: #007bff;
     backdrop-filter: blur(60px);
-    transition: .2s ease-in-out; /* Apply blur on hover */
+    transition: .2s ease-in-out;
 }
-
 .box h4 {
     font-size: 1.2rem;
     color: #333;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .box p {
     font-size: 1rem;
     color: #666;
 }
-
 .percentage {
     font-size: 2rem;
     font-weight: bold;
-    color: #fff; /* White text for visibility */
+    color: #fff;
     position: absolute;
-    top: 50%; /* Center text vertically */
-    left: 50%; /* Center text horizontally */
-    transform: translate(-50%, -50%); /* Exactly center the text */
-    opacity: 0; /* Initially hide the percentage */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-
 .box:hover .percentage {
-    opacity: 1; /* Show percentage on hover */
+    opacity: 1; 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* General Section Styling */
+/*---ABOUT ME SECTION--- */
 #aboutme {
     width: 100%;
     height: 100vh;
@@ -285,7 +251,6 @@ button.resume{
     background-color: #000000;
     padding: 20px;
 }
-
 .about-container {
     max-width: 1200px;
     width: 100%;
@@ -298,8 +263,6 @@ button.resume{
     padding: 40px;
     gap: 30px;
 }
-
-/* Image Section */
 .image-selection {
     flex: 1;
     display: flex;
@@ -307,7 +270,6 @@ button.resume{
     align-items: center;
     border: white;
 }
-
 .about-image {
     height: 300px;
     width: 300px;
@@ -315,33 +277,26 @@ button.resume{
     object-fit: cover;
     border: 4px solid #ddd;
 }
-
-/* Info Section */
 .infosection {
     flex: 2;
     text-align: left;
     color: #333;
 }
-
 .infosection h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #333;
 }
-
 .infosection h2 {
     font-size: 1.5rem;
     color: #007bff;
     margin-bottom: 20px;
 }
-
 .infosection p {
     font-size: 1rem;
     line-height: 1.6;
     color: #666;
 }
-
-/* Skill Section */
 .skillsection {
     flex: 2;
     display: flex;
@@ -349,7 +304,6 @@ button.resume{
     gap: 20px;
     justify-content: center;
 }
-
 .skill {
     display: flex;
     justify-content: space-between;
@@ -357,41 +311,31 @@ button.resume{
     font-size: 1.2rem;
     color: #333;
 }
-
 .subject {
     font-weight: bold;
     color: #555;
     width: 150px;
 }
-
 .progress-bar {
     width: 70%;
     background-color: #e0e0e0;
     border-radius: 20px;
     overflow: hidden;
 }
-
 .progress-line {
     height: 15px;
     background-color: #007bff;
     border-radius: 20px;
 }
-
-/* Hover Effects */
 .skill:hover .subject {
     color: #007bff;
     cursor: pointer;
 }
-
 .skill:hover .progress-line {
     background-color: #007bff;
 }
 
-
-
-
-
-
+/*----EXPERIENCE-----*/
 
 #experience {
     padding: 50px 20px;
@@ -420,9 +364,7 @@ button.resume{
     position: relative;
     display: inline-block;
     margin-top: 10px;
-    color: #3a1c71;
 }
-
 .experience-section h2::before,
 .experience-section h2::after {
     content: '';
@@ -432,7 +374,6 @@ button.resume{
     background-color: #ff6b6b;
     margin: 10px auto 0 auto;
 }
-
 .experience-container {
     display: flex;
     justify-content: center;
@@ -441,7 +382,6 @@ button.resume{
     height: 100%;
     flex-wrap: wrap;
 }
-
 .experience-card {
     background-color: #fff;
     border: 1px solid #e6e6e6;
@@ -452,12 +392,10 @@ button.resume{
     text-align: left;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .experience-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
 .date-range {
     background-color: #007bff;
     color: #fff;
@@ -467,27 +405,21 @@ button.resume{
     display: inline-block;
     margin-bottom: 10px;
 }
-
 .experience-card h3 {
     font-size: 1.2rem;
     margin: 10px 0;
 }
-
 .experience-card p {
     font-size: 0.9rem;
     margin: 10px 0;
     color: #666;
 }
-
 .experience-card span {
     font-size: 0.8rem;
     color: #999;
 }
 
-
-
-
-
+/*----FOOTER SECTION-----*/
 footer {
     background-color: #000000;
     color: #fff;
@@ -556,3 +488,306 @@ footer {
     font-size: 20px;
     align-items: center;
   }
+
+  /*SMALL SCREEN VIEW*/
+  @media (max-width: 1200px) {
+    .menu-btn{
+        display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .hide{
+        display: none;
+    }
+    .menu-btn{
+        display: flex;
+    }
+    .background-text{
+        font-size: 3rem;
+    }
+    .floating-elements{
+        display: none;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .edu-details {
+        padding: 10px;
+        gap: 1rem;
+    }
+
+    .edu-title h2 {
+        font-size: 1.3rem;
+    }
+
+    .box {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .box h4 {
+        font-size: 0.9rem;
+    }
+
+    .box p {
+        font-size: 0.8rem;
+    }
+
+    .percentage {
+        font-size: 1.2rem;
+    }
+
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .edu-details {
+        padding: 10px;
+        gap: 1rem;
+    }
+
+    .edu-title h2 {
+        font-size: 1.3rem;
+    }
+
+    .box {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .box h4 {
+        font-size: 0.9rem;
+    }
+
+    .box p {
+        font-size: 0.8rem;
+    }
+
+    .percentage {
+        font-size: 1.2rem;
+    }
+
+    .about-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .about-image {
+        height: 10px;
+        width: 10px;
+    }
+
+    .infosection h1 {
+        font-size: 1.8rem;
+    }
+
+    .infosection h2 {
+        font-size: 1.1rem;
+    }
+
+    .infosection p {
+        font-size: 0.8rem;
+    }
+
+
+
+    .experience-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .experience-container {
+        flex-direction: row;
+        gap: 15px;
+        height: 10px;
+        width: 300px;
+    }
+
+    .experience-card {
+        max-width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .experience-card h3 {
+        font-size: 1rem;
+    }
+
+    .experience-card p {
+        font-size: 0.8rem;
+    }
+
+    .date-range {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .background-text {
+        font-size: 6rem; /* Smaller background text for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .side-bar{
+        width: 100%;
+}
+.section-title {
+    font-size: 1.5rem;
+}
+/*ACADEMICS SECTION*/
+.edu-title h2 {
+    font-size: 1.2rem;
+}
+
+.box {
+    padding: 8px;
+    width: 100%;
+}
+
+.box h4 {
+    font-size: 0.9rem;
+}
+
+.box p {
+    font-size: 0.8rem;
+}
+
+.percentage {
+    font-size: 1.2rem;
+}
+
+/* About Me Section */
+
+.about-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+}
+
+.about-image{
+    height: 10px;
+    width: 10px;
+}
+
+.infosection h1 {
+    font-size: 1.8rem;
+}
+
+.infosection h2 {
+    font-size: 1.1rem;
+}
+
+.infosection p {
+    font-size: 0.8rem;
+}
+
+.skillsection {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill .subject {
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.progress-line {
+    width: 100%;
+}
+
+/* Skill Section */
+.skillsection {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill .subject {
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.progress-line {
+    width: 100%;
+}
+
+/* Skill Section */
+.skillsection {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill .subject {
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.progress-line {
+    width: 100%;
+}
+
+/* Footer Section */
+footer {
+    font-size: 14px;
+    padding: 15px;
+}
+
+.social-links a {
+    font-size: 16px;
+    margin: 0 5px;
+}
+/*ABOUTME SECTION*/
+.section-title {
+    font-size: 1.5rem;
+}
+
+.edu-title h2 {
+    font-size: 1.2rem;
+}
+
+.box {
+    padding: 8px;
+}
+
+.box h4 {
+    font-size: 0.8rem;
+}
+
+.box p {
+    font-size: 0.7rem;
+}
+
+.percentage {
+    font-size: 1rem;
+}
+
+.about-container {
+    padding: 10px;
+}
+
+.about-image {
+    height: 100px;
+    width: 100px;
+}
+
+.infosection h1 {
+    font-size: 1.5rem;
+}
+
+.infosection h2 {
+    font-size: 1rem;
+}
+
+.infosection p {
+    font-size: 0.7rem;
+}
+}
