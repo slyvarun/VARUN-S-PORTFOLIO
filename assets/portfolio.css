@@ -359,21 +359,6 @@ button.resume{
     pointer-events: none;
     white-space: nowrap;
 }
-.experience-section h2 {
-    font-size: 1rem;
-    position: relative;
-    display: inline-block;
-    margin-top: 10px;
-}
-.experience-section h2::before,
-.experience-section h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: #ff6b6b;
-    margin: 10px auto 0 auto;
-}
 .experience-container {
     display: flex;
     justify-content: center;
@@ -630,10 +615,22 @@ footer {
 
 @media (max-width: 480px) {
     .side-bar{
-        width: 100%;
+        width: 50%;
+        height: 300px;
 }
 .section-title {
     font-size: 1.5rem;
+}
+.into-block-sub h{
+    font-size: 30px;
+}
+.resume{
+    width: 100%;
+    display: flex;
+
+}
+.resume-btn{
+    font-size: 10px;
 }
 /*ACADEMICS SECTION*/
 .edu-title h2 {
@@ -657,6 +654,21 @@ footer {
     font-size: 1.2rem;
 }
 
+/* experence section*/
+
+.background-text {
+    margin-top: 15px;
+    font-size: 3rem;
+}
+.experience-card p{
+    display: none;
+}
+.experience-container{
+    height: 100%;
+}
+#experience{
+    height: 100vh;
+}
 /* About Me Section */
 
 .about-container {
@@ -740,11 +752,32 @@ footer {
     font-size: 14px;
     padding: 15px;
 }
-
-.social-links a {
-    font-size: 16px;
-    margin: 0 5px;
+footer h2{
+    display: none;
 }
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    align-items: center;
+}
+.footer-img{
+    height: 30px;
+    margin: 5px;
+}
+.social-links {
+    margin-top: 20px;
+    align-items: center;
+  }
+  .footer-img:hover{
+    filter: invert(1);
+  }
+  .footer-text{
+    font-size: 10px;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+  }
 /*ABOUTME SECTION*/
 .section-title {
     font-size: 1.5rem;
