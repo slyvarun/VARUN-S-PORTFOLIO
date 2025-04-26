@@ -8,46 +8,73 @@
     <link rel="script" href="assets/server.js">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a style="color: #007bff; cursor: default;">SLY</a></li> 
-                <li class="hide"><a href="#academics">Academics</a></li>
-                <li class="hide"><a href="#aboutme">About Me</a></li>
-                <li class="hide"><a href="#experience">Experience</a></li>
-                <li class="menu-btn" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-            </ul>
-            
-            <ul class="side-bar">
-                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a href="#academics">Academics</a></li>
-                <li><a href="#aboutme">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
-            </ul>
-
-            </nav>
-        </header>
-        <div class="line">
-            <span></span>
-        </div>
-        <div class="main-body">
-            <div class="floating-elements">
-                <span><P> &#128075;</P></span>
-            </div>
-    <div class="into-block">
-        <div class="into-block-sub">
-            <div>
-           <h>Hello, I am</h><br>
-           <h>Varun</h><br>
-           <h1>i am a student<br>-a passionated web developer</h>
-        </div>
+    <section class="home">
+    <div class="sidebar">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank"><img src="/photos/linkedin (1).png"></a></li>
+            <li><a href="https://github.com/yourprofile" target="_blank"><img src="/photos/github.png"></a></li>
+            <li><a href="https://twitter.com/yourprofile" target="_blank"><img src="/photos/instagram (1).png"></a></li>
+            <li><a href="https://www.instagram.com/yourprofile" target="_blank"><img src="/photos/twitter (1).png"></a></li>
+        </ul>
     </div>
+
+
+
+
+
+
+
+
+
+
+    <header>
+        <nav class="navbar">
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <script>document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+        
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+        </script>
+        </header>
+        
+        <div></div>
+        <section class="hero">
+            <div class="designer">designer</div>
+            <div class="coder">&lt;coder&gt;</div>
+            
+        </section>
+        <!-- Greeting Section -->
+        <section class="greeting">
+            <h1 id="greeting-text"></h1>
+            <p>Hi, I'm Varun! A passionate tech enthusiast, developer, and problem solver. Explore my work and feel free to connect!</p>
+        </section>
+
     <div class="resume">
         <button class="resume-btn"><a href="/my portfolio/photos/SAI VARUN DEGALA (1).pdf" style="text-decoration: none; color: black;">RESUME</a></button>
             <button class="resume-btn">DOWNLOAD CV</button>
             </div>
     </div>
+    
 </div>
+</section>
+
+
 
 <section id="academics">
     <h1 class="section-title">ACADEMICS</h1>
