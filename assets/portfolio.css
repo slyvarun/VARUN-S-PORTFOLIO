@@ -4,84 +4,163 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
-    background: black;
-    height: 100%;
-}
-.main-body{
+
+.home{
     height: 100vh;
-    width: 100%;
-    border-top-right-radius: 20px ;
-    border-top-left-radius:20px;
+    background:url(/photos/Untitled\ design.jpg);
+    background-size: cover;  /* Ensures it covers the whole page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
 }
-@keyframes popin{
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 90%;
-    }
+.sidebar {
+    width: 100px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
 }
-.line span{
+.sidebar img{
+    height: 40px;
+    transition: transform 0.1s ease-in-out;
+}
+.sidebar img:hover, ul li a:hover{
+    transform: scale(1.2);
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0px;
+    margin-top: 100px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
     display: block;
-    background-color: #007bff;
-    height: 2px;
-    animation: popin 1s ease forwards;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
 }
 
-.floating-elements{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    animation: shake 2s infinite;
-    cursor:default;
-}
-.floating-elements p{
-    font-size: 200px;
-}
-@keyframes shake{
-    0%{ transform: rotate(0deg);}
-    20%{ transform: rotate(25deg);}
-    40%{ transform: rotate(-15deg);}
-    60%{ transform: rotate(20deg);}
-    80%{ transform: rotate(-10deg);}
-    100%{ transform: rotate(0deg);}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-/* Basic styling for the header and nav */
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
 
-nav ul {
-    width: 50%;
+/* Nav Links */
+.nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-}
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
 }
 
-nav a {
-    height: 100%;
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    color: white;
     text-decoration: none;
-    display: flex;
-    padding: 0 30px 10px;
-    align-items: center;
-    color: #e6e6e6;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    transition: transform 0.1s;
 }
-nav a:hover {
-    transition-property: all;
-    color: #007bff;
-    transition: all ease .2s;
 
+.nav-links li a:hover {
+    color: teal;
+    transform: scale(1.2);
 }
-nav li:first-child{
-    margin-right: auto;
-    font-size: x-large;
+/* Hamburger Menu (Left Side) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        height: 100vh;
+        left: 0;
+        background-color: #333;
+        width: 20%;
+        text-align: left;
+        padding: 10px;
+    }
+    .nav-links li {
+        margin:15px;
+    }
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+        transition: color 0.3s ease-in-out;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+
+
+
+.hero {
+    display: flex;
+    height: 100%;
+    position: fixed;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15rem;
+    text-transform: uppercase;
+    font-size: 5em;
+    font-family: Arial, Helvetica, sans-serif ;
+    position: relative;
+    padding: 50px 0;
+}
+
+
+
+
+
+
 .side-bar{
     position: fixed;
     top: 0;
